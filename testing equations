@@ -1,6 +1,7 @@
 import unittest
 
-#import and 
+#implementation of tests 
+
 """
 class LearnTest(unittest.TestCase):
 
