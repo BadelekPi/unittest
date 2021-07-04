@@ -1,0 +1,32 @@
+import unittest
+
+def calc(a, b):
+    if b == 0:
+        raise ValueError('Can not divide by zero!')
+    divide = a / b
+    return divide
+
+class Test(unittest.TestCase):
+
+    def setUp(self):
+        self.a = 10
+        self.b = 12
+
+    def tearDown(self):
+        self.a = 1
+        self.b = 2
+
+
+    def test1(self):
+        result = calc(self.a, self.b)
+
+        self.assertEqual(result, self.a / self.b)
+################################################################
+
+        # check if error works well
+        with self.assertRaises(ValueError):
+            calc(10, 0)
+            
+################################################################
+if __name__ == "__main__":
+    unittest.main()
