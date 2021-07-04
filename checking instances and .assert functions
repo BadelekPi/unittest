@@ -1,0 +1,21 @@
+import unittest
+
+class Test(unittest.TestCase):
+
+    def test_sample1(self):
+        t1 = Test()
+        t2 = Test()
+        self.assertIsInstance(t1, Test, msg = "Instance Mismatch")
+
+    def test_sample2(self):
+        t1 = Test()
+        t2 = Test()
+        self.assertIsNotNone(t2)
+
+    def test_sample3(self):
+        t1 = Test()
+        t2 = Test()
+        self.assertTrue(t1==t2)
+
+if __name__ == "__main__":
+    unittest.main()
